@@ -1,5 +1,11 @@
-/* Animación back UI */
+/* Components */
+/* import Idiomas from '../js/components/Idiomas' */
+import Modelo from '../js/components/Modelo'
 
+/* variables */
+const root = document.querySelector('#root')
+
+/* Animación back UI */
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
@@ -97,3 +103,8 @@ window.addEventListener('resize', function () {
   let aBubbles = [];
   let aBgBubbles = [];
 });
+
+window.onload = function(){
+  root.appendChild(Modelo())
+
+}

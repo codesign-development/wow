@@ -1,0 +1,55 @@
+.selectIdiomas {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 0;
+}
+
+.logoWow {
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.logoWow img {
+  width: 100%;
+}
+
+.btnGroup {
+  width: 30%;
+  margin-top: 15%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.btnGroup img {
+  width: 10%;
+}
+.btnX{
+    max-width: 60px;
+    position: absolute;
+  top: -40px;
+  right: -30px;
+}
+.btnX>img{
+    width: 100%;
+}
+
+.btnEnter{
+    max-width: 200px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+.btnEnter>img{
+    width: 100%;
+    position: absolute;
+}
+.btnEnter>p{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    font-size: 1.2em;
+    font-weight: bolder;
+}

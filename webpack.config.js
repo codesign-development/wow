@@ -25,7 +25,11 @@ module.exports = {
                     presets: ['@babel/preset-env']
                   }
                 }
-              }
+              },
+              {
+                test: /\.html$/i,
+                loader: 'html-loader',
+              },
         ]
     }
 } 
