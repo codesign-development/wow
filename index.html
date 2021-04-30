@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="./css/idiomas.css">
     <link rel="stylesheet" href="./css/model.css">
     <link rel="stylesheet" href="./css/index.css">
-
+    
     <title>Exhibiciones Wow</title>
 </head>
 <body>
     <!-- /* Animación back UI */ -->
     <canvas id="canvasbg"></canvas>
     <canvas id="canvas"></canvas>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <svg id="svgFilter"xmlns="http://www.w3.org/2000/svg" version="1.1">
         <defs>
             <filter id="goo">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
@@ -27,6 +31,7 @@
     <div id="root">
         
     </div>
+    
     <div class="footer">
         <img src="./public/assets/wave-footer.svg" alt="wave-footer" >
     </div> 

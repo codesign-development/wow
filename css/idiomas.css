@@ -26,30 +26,35 @@
 .btnGroup img {
   width: 10%;
 }
-.btnX{
-    max-width: 60px;
-    position: absolute;
-  top: -40px;
-  right: -30px;
-}
-.btnX>img{
-    width: 100%;
+
+.btnX {
+  max-width: 40px;
+  position: absolute;
+  top: -20px;
+  right: -15px;
 }
 
-.btnEnter{
-    max-width: 200px;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 20%;
+
+.btnX>img {
+  width: 100%;
 }
-.btnEnter>img{
-    width: 100%;
-    position: absolute;
+
+.btnEnter {
+  max-width: 200px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20%;
 }
-.btnEnter>p{
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    font-size: 1.2em;
-    font-weight: bolder;
+
+.btnEnter>img {
+  width: 100%;
+  position: absolute;
+}
+
+.btnEnter>p {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.2em;
+  font-weight: bolder;
 }

@@ -1,3 +1,4 @@
+/*Simulación conttainer three js */
 .model {
   background-image: url('../public/assets/bg-poster-3d.jpg');
   background-position: center;
@@ -5,37 +6,41 @@
   z-index: 8;
   width: 100%;
   height: 100vh;
+  display: block
 }
 
-.bienvenida {
+/* Modal bienvenida */
+.wrapperModales {
   width: 100%;
   height: 100vh;
   position: relative;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
 .overlay {
-  background-color: #866eea;
-  mix-blend-mode: lighten;
+  background-color: #D1E1EE;
+  mix-blend-mode: multiply;
   position: absolute;
   width: 100%;
   height: 100%;
+  
 }
 
-.bienvenida h1 {
+.wrapperModales h1 {
   text-align: center;
 }
 
-.bienvenida p {
+.wrapperModales p {
   text-align: center;
 }
 
 .logoWowBen {
   width: 15%;
   margin-bottom: 40px;
+  display: none;
 }
 
 .logoWowBen img {
@@ -52,36 +57,43 @@
   -webkit-box-shadow: 0px 5px 26px 0px #6550E2;
   box-shadow: 0px 5px 26px 0px #6550E2;
   z-index: 2;
+  display: none;
 }
 
-.uiModel{
+/* UI Model */
+.uiModel {
   position: absolute;
-  top:40px;
+  top: 40px;
   right: 0%;
   width: auto;
   height: auto;
   background-color: transparent;
-  z-index: 2;
+  z-index: 10;
 }
-.btnModel{
+
+.btnModel {
   max-width: 60px;
   height: auto;
   margin-bottom: 28px;
 }
-.btnModel>img{
+
+.btnModel>img {
   width: 100%;
 }
 
-.uiUser{
+/* UI User */
+.uiUser {
   position: absolute;
   top: 40px;
   left: 0;
   width: 25%;
 }
-.wrapperScore{
+
+.wrapperScore {
   position: relative;
 }
-.cardPoints{
+
+.cardPoints {
   position: relative;
   margin: 0;
   display: flex;
@@ -89,15 +101,16 @@
   align-items: center;
 }
 
-.nameUser{
+.nameUser {
   width: 50%;
 }
 
-.nameUser>p{
+.nameUser>p {
   text-align: center;
   font-weight: bolder;
 }
-.points{
+
+.points {
   width: 50%;
   display: flex;
   flex-wrap: nowrap;
@@ -105,26 +118,29 @@
   justify-content: flex-end;
 }
 
-.coins{
+.coins {
   max-width: 28px;
 }
-.coins>img{
- width: 100%;
+
+.coins>img {
+  width: 100%;
 }
 
-.score{
+.score {
   background-color: #6550E2;
   height: auto;
   margin: 8px 24px 8px 24px;
   padding: 0px 20px 0px 20px;
   border-radius: 8px;
 }
-.score>p{
+
+.score>p {
   line-height: .5em;
   font-size: 1em;
   font-weight: bolder;
 }
-.bgoverlay{
+
+.bgoverlay {
   width: 100%;
   height: 100%;
   background-color: #6550E2;
@@ -133,4 +149,116 @@
   left: 0;
   mix-blend-mode: hard-light;
   border-radius: 0px 16px 16px 0px;
+}
+
+.toolTip {
+  width: 40%;
+  height: 30%;
+  position: relative;
+  z-index: 4;
+  display: none;
+  flex-direction: column;
+}
+
+.cardTool {
+  position: relative;
+  background-color: #6550E2;
+  border-radius: 16px;
+  padding: 40px;
+  -webkit-box-shadow: 0px 5px 26px 0px #6550E2;
+  box-shadow: 0px 5px 26px 0px #6550E2;
+}
+
+.iconNav{
+  max-width: 80px;
+  margin:0  auto;
+}
+.iconNav>img{
+ width: 100%;
+}
+
+.iconPointer{
+  max-width: 80px;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+}
+
+.iconPointer>img{
+  width: 100%;
+ }
+
+ .tootTipLat{
+   position: absolute;
+   top: 60px;
+   right: 70px;
+   width: 16%;
+   display: none;
+ }
+ .containerBullet{
+   position: relative;
+   width: 100%;
+ }
+ .containerBullet>p{
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: 80%;
+  font-size: .8em;
+}
+ .bullet{
+   max-width: 270px;
+   
+ }
+ .bullet>img{
+  width: 100%;
+  
+}
+ .btnXLeft {
+  max-width: 30px;
+  position: absolute;
+  top: -20px;
+  left: -15px;
+  z-index: 2;
+}
+
+.btnXLeft>img{
+  width: 100%;
+}
+
+.wrapperMenu{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 6;
+  
+}
+
+#morph{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -25%;
+  pointer-events: none;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+}
+.menuMorph{
+  pointer-events: none;
+}
+.arrowBack{
+  position: absolute;
+  left: 55%;
+  top: 6%;
+  z-index: 12;
+  max-width: 60px;
+  display: none;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+}
+.arrowBack>img{
+  width: 100%;
 }
