@@ -1,0 +1,74 @@
+.categorias {
+  width: 100%;
+  height: auto;
+}
+
+.containercategoria>h2 {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.swipperMisiones {
+  width: auto;
+  white-space: nowrap;
+  height: auto;
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.IconContent {
+  max-width: 80px;
+  height: auto;
+  margin-left: 28px;
+}
+
+.iconComponent {
+  background-color: #6550E2;
+  max-width: 80px;
+  max-height: 80px;
+  padding: 12px 12px 8px 12px;
+  border-radius: 24px;
+  -webkit-box-shadow: 0px 5px 26px 0px #6550E2;
+  box-shadow: 0px 5px 26px 0px #6550E2;
+}
+
+.bgIcon {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bgIcon>img {
+  width: 100%;
+}
+
+.wrapperIconsCat {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.iconComponent>p {
+  font-size: .5em;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+.progressCat {
+  background-color: #D1E1EE;
+  border-radius: 8px;
+  padding: 0;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.progressCat>div {
+  background-color: #9AC906;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 8px;
+  border-radius: 8px;
+}

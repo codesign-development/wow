@@ -1,0 +1,88 @@
+.containerStats {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerMisiones {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.containerMisiones>h2 {
+  width: 100%;
+  text-align: right;
+}
+
+.cardMision {
+  position: relative;
+  max-width: 80px;
+  height: 160px;
+  margin-left: 28px;
+  display: inline-block;
+}
+
+.bulletMision {
+  position: relative;
+  width: 100%;
+}
+
+.bulletMision>img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.mision {
+  position: relative;
+  color: #6550E2;
+  z-index: 2;
+  width: 100%;
+  padding: 8px;
+}
+
+.mision>p {
+  font-size: .5em;
+  text-align: center;
+  width: 100%;
+}
+
+.iconMision {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.iconMision>img {
+  width: 80%;
+}
+
+.numberMision {
+  max-width: 80px;
+  position: relative;
+  margin-top: 28px;
+}
+
+.numberMision>p {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  text-align: center;
+  margin-block-start: .2em;
+  margin-block-end: 0em;
+  font-weight: bolder;
+}
+
+.numberFoot {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.numberFoot>img {
+  width: 100%;
+}

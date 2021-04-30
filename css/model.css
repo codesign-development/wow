@@ -69,15 +69,34 @@
   height: auto;
   background-color: transparent;
   z-index: 10;
+  transition: all ease-in-out 1s;
 }
 
-.btnModel {
+.btnModel1 {
   max-width: 60px;
   height: auto;
   margin-bottom: 28px;
 }
 
-.btnModel>img {
+.btnModel1>img {
+  width: 100%;
+}
+.btnModel2 {
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.btnModel2>img {
+  width: 100%;
+}
+.btnModel3 {
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.btnModel3>img {
   width: 100%;
 }
 
@@ -243,8 +262,7 @@
   top: 0;
   right: -25%;
   pointer-events: none;
-  opacity: 0;
-  transition: all ease-in-out 1s;
+
 }
 .menuMorph{
   pointer-events: none;
@@ -257,8 +275,15 @@
   max-width: 60px;
   display: none;
   opacity: 0;
-  transition: all ease-in-out 1s;
+  transition: all ease-in-out 2s;
 }
 .arrowBack>img{
   width: 100%;
+}
+
+.optionMenu{
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
 }
