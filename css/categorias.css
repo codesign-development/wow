@@ -16,11 +16,15 @@
   overflow-y: hidden;
   overflow-x: auto;
 }
-
+.swipperMisiones::-webkit-scrollbar {
+  display: none;
+}
 .IconContent {
   max-width: 80px;
   height: auto;
   margin-left: 28px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .iconComponent {

@@ -1,6 +1,6 @@
 /* Components */
-/* import Idiomas from '../js/components/Idiomas' */
-import Modelo from '../js/components/Modelo'
+import Idiomas from '../js/components/Idiomas'
+/* import Modelo from '../js/components/Modelo' */
 
 /* variables */
 const root = document.querySelector('#root')
@@ -104,7 +104,6 @@ window.addEventListener('resize', function () {
   let aBgBubbles = [];
 });
 
-window.onload = function(){
-  root.appendChild(Modelo())
 
-}
+root.appendChild(Idiomas())
+

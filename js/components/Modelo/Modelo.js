@@ -4,19 +4,28 @@ import Stats from '../Stats'
 import anime from 'animejs'
 
 export default () => {
-
+  /* construcciòn contenedor */
   const model = document.createElement('div')
-
   model.className = 'model'
   model.innerHTML = modeloView
-  
+  /* Variables */
   const btnsModel = model.querySelector('.uiModel')
   const bgMenu = model.querySelector('#morph')
   const menuMorph = model.querySelector('.menuMorph')
   const arrowBack = model.querySelector('.arrowBack')
-  const uiModel = model.querySelector('.uiModel')
   const optionMenu = model.querySelector('.optionMenu')
-
+  const btnEnter = model.querySelector('.btnEnter')
+  const overlay = model.querySelector('.overlay')
+  const welcomeModal = model.querySelector('.welcomeModal')
+  const logoWowBem = model.querySelector('.logoWowBen')
+  const toolTip = model.querySelector('.toolTip')
+  const iconNav = model.querySelector('.iconNav')
+  const iconPointer = model.querySelector('.iconPointer')
+  const iconNavB = model.querySelector('.iconNav2')
+  const iconPointerB = model.querySelector('.iconPointer2')
+  const txtCardTool = model.querySelector('.cardTool p')
+  console.log(txtCardTool);
+  /* Morphing bgMenu */
   let morphing = anime({
     targets: menuMorph,
     d: [
@@ -106,6 +115,54 @@ export default () => {
     uiModel.style.opacity = 1
     uiModel.style.pointerEvents = 'auto'
     optionMenu.removeChild(optionMenu.firstChild)
+  })
+
+  btnEnter.addEventListener('click', e =>{
+    e.stopPropagation()
+    welcomeModal.style.display = 'none'
+    logoWowBem.style.display = 'none'
+    overlay.style.backgroundColor = '#000'
+    btnsModel.style.display = 'block'
+    toolTip.style.display = 'block'
+    anime({
+      targets: iconPointer,
+      translateX: 120,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutQuad',
+      duration: 2000,
+    })
+    anime({
+      targets: iconNav,
+      translateX: 120,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutQuad',
+      duration: 2000,
+    })
+    setTimeout(()=>{
+      iconNav.style.display = 'none'
+      iconPointer.style.display = 'none'
+      iconNavB.style.display = 'block'
+      iconPointerB.style.display = 'block'
+      txtCardTool.textContent = 'Puede explorar el entorno, navegando a través de las flechas'
+      anime({
+        targets: iconPointerB,
+        scale: .8,
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutQuad',
+        duration: 2000,
+      })
+      anime({
+        targets: iconNavB,
+        scale: .8,
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutQuad',
+        duration: 2000,
+      })
+    }, 4000)
   })
 
   return model
