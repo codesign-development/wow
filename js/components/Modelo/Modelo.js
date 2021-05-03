@@ -10,6 +10,7 @@ export default () => {
   model.innerHTML = modeloView
   /* Variables */
   const btnsModel = model.querySelector('.uiModel')
+  const uiUser = model.querySelector('.uiUser')
   const bgMenu = model.querySelector('#morph')
   const menuMorph = model.querySelector('.menuMorph')
   const arrowBack = model.querySelector('.arrowBack')
@@ -24,7 +25,10 @@ export default () => {
   const iconNavB = model.querySelector('.iconNav2')
   const iconPointerB = model.querySelector('.iconPointer2')
   const txtCardTool = model.querySelector('.cardTool p')
-  console.log(txtCardTool);
+  const toolTipLat = model.querySelector('.toolTipLat')
+  const txtBullet = model.querySelector('.containerBullet p')
+  const menuLat = model.querySelector('.wrapperMenu')
+  
   /* Morphing bgMenu */
   let morphing = anime({
     targets: menuMorph,
@@ -92,8 +96,8 @@ export default () => {
         bgMenu.classList.add('active')
         arrowBack.style.display = 'block'
         arrowBack.style.opacity = 1
-        uiModel.style.opacity = 0
-        uiModel.style.pointerEvents = 'none'
+        btnsModel.style.opacity = 0
+        btnsModel.style.pointerEvents = 'none'
 
       } else {
         bgMenu.classList.remove('active')
@@ -104,26 +108,35 @@ export default () => {
     }
   })
 
-  arrowBack.addEventListener('click', (e) => {
-    e.stopPropagation()
+  arrowBack.addEventListener('click', () => {
+    
     morphing.reverse()
     morphing.play()
     arrowBack.style.display = 'none'
     arrowBack.style.opacity = 0
     bgMenu.classList.remove('active')
     bgMenu.classList.add('unactive')
-    uiModel.style.opacity = 1
-    uiModel.style.pointerEvents = 'auto'
+    btnsModel.style.opacity = 1
+    btnsModel.style.pointerEvents = 'auto'
     optionMenu.removeChild(optionMenu.firstChild)
   })
 
-  btnEnter.addEventListener('click', e =>{
-    e.stopPropagation()
-    welcomeModal.style.display = 'none'
+  function initUI(){
+    toolTipLat.style.display = 'none'
+    btnsModel.style.pointerEvents = 'auto'
+    uiUser.style.opacity = 1
+    uiUser.style.display = 'block'
+    menuLat.style.display = 'block'
+    console.log(uiUser);
+   }
+/* Animación tooltip */
+ function openToolTip(){
+  welcomeModal.style.display = 'none'
     logoWowBem.style.display = 'none'
     overlay.style.backgroundColor = '#000'
     btnsModel.style.display = 'block'
     toolTip.style.display = 'block'
+    
     anime({
       targets: iconPointer,
       translateX: 120,
@@ -162,7 +175,37 @@ export default () => {
         easing: 'easeInOutQuad',
         duration: 2000,
       })
+      setTimeout(()=>{
+        toolTip.style.display = 'none'
+        toolTipLat.style.display = 'block'
+        
+        setTimeout(()=>{
+          txtBullet.textContent = 'Este botón guarda tu progreso durante la sesión'
+          anime({
+          targets: toolTipLat,
+          translateY: 100,
+          easing: 'linear',
+          })
+          setTimeout(()=>{
+            txtBullet.textContent = 'Este botón muestra tus logros y misiones'
+            anime({
+            targets: toolTipLat,
+            translateY: 180,
+            easing: 'linear',
+            })
+            setTimeout(()=>{
+              initUI()
+            },4000)
+          }, 4000)
+        }, 4000)
+      }, 5000)
     }, 4000)
+ }
+ 
+  /* Listener bienvenida */
+  btnEnter.addEventListener('click', e =>{
+    e.stopPropagation()
+    openToolTip()
   })
 
   return model

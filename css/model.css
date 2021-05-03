@@ -108,7 +108,9 @@
   top: 40px;
   left: 0;
   width: 25%;
+  opacity: 0;
   display: none;
+  transition: all ease-in 2s;
 }
 
 .wrapperScore {
@@ -232,7 +234,7 @@
   width: 100%;
  }
 
- .tootTipLat{
+ .toolTipLat{
    position: absolute;
    top: 60px;
    right: 70px;

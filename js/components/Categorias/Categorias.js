@@ -12,7 +12,7 @@ export default ()=>{
     anime({
         targets: iconContent,
         opacity: 1,
-        delay: anime.stagger(200) // increase delay by 100ms for each elements.
+        delay: anime.stagger(100) // increase delay by 100ms for each elements.
       });
 
     return categoriaContainer
