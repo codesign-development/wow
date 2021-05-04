@@ -26,7 +26,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  
 }
 
 .wrapperModales h1 {
@@ -83,6 +82,7 @@
 .btnModel1>img {
   width: 100%;
 }
+
 .btnModel2 {
   max-width: 60px;
   height: auto;
@@ -92,6 +92,7 @@
 .btnModel2>img {
   width: 100%;
 }
+
 .btnModel3 {
   max-width: 60px;
   height: auto;
@@ -179,8 +180,8 @@
   width: 40%;
   height: 30%;
   position: relative;
-  z-index: 4;
   display: none;
+  z-index: 12;
   flex-direction: column;
   transition: all ease-in-out 2s;
 }
@@ -192,37 +193,40 @@
   padding: 40px;
   -webkit-box-shadow: 0px 5px 26px 0px #6550E2;
   box-shadow: 0px 5px 26px 0px #6550E2;
+  z-index:12;
 }
 
-.iconNav{
+.iconNav {
   max-width: 80px;
-  margin:0  auto;
-}
-.iconNav>img{
- width: 100%;
+  margin: 0 auto;
 }
 
-.iconPointer{
+.iconNav>img {
+  width: 100%;
+}
+
+.iconPointer {
   max-width: 80px;
   position: absolute;
   top: 3%;
   left: 50%;
 }
 
-.iconPointer>img{
+.iconPointer>img {
   width: 100%;
- }
+}
 
- .iconNav2{
+.iconNav2 {
   max-width: 80px;
-  margin:0  auto;
+  margin: 0 auto;
   display: none;
 }
-.iconNav2>img{
- width: 100%;
+
+.iconNav2>img {
+  width: 100%;
 }
 
-.iconPointer2{
+.iconPointer2 {
   max-width: 80px;
   position: absolute;
   top: 3%;
@@ -230,37 +234,40 @@
   display: none;
 }
 
-.iconPointer2>img{
+.iconPointer2>img {
   width: 100%;
- }
+}
 
- .toolTipLat{
-   position: absolute;
-   top: 60px;
-   right: 70px;
-   width: 16%;
-   display: none;
- }
- .containerBullet{
-   position: relative;
-   width: 100%;
- }
- .containerBullet>p{
+.toolTipLat {
+  position: absolute;
+  top: 60px;
+  right: 70px;
+  width: 16%;
+  display: none;
+}
+
+.containerBullet {
+  position: relative;
+  width: 100%;
+}
+
+.containerBullet>p {
   position: absolute;
   top: 0%;
   left: 10%;
   width: 80%;
   font-size: .8em;
 }
- .bullet{
-   max-width: 270px;
-   
- }
- .bullet>img{
-  width: 100%;
-  
+
+.bullet {
+  max-width: 270px;
 }
- .btnXLeft {
+
+.bullet>img {
+  width: 100%;
+}
+
+.btnXLeft {
   max-width: 30px;
   position: absolute;
   top: -20px;
@@ -268,11 +275,22 @@
   z-index: 2;
 }
 
-.btnXLeft>img{
+.btnXLeft>img {
+  width: 100%;
+}
+.btnXtool {
+  max-width: 40px;
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  z-index: 2;
+}
+
+.btnXtool>img {
   width: 100%;
 }
 
-.wrapperMenu{
+.wrapperMenu {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -282,19 +300,20 @@
   display: none;
 }
 
-#morph{
+#morph {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   right: -25%;
   pointer-events: none;
-
 }
-.menuMorph{
+
+.menuMorph {
   pointer-events: none;
 }
-.arrowBack{
+
+.arrowBack {
   position: absolute;
   left: 55%;
   top: 6%;
@@ -304,13 +323,84 @@
   opacity: 0;
   transition: all ease-in-out 2s;
 }
-.arrowBack>img{
+
+.arrowBack>img {
   width: 100%;
 }
 
-.optionMenu{
+.optionMenu {
   position: absolute;
   width: 50%;
   right: 0;
   top: 0;
+}
+
+.notification {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  background-color: #9AC906;
+  align-items: center;
+  position: absolute;
+  top: 120px;
+  left: -280px;
+  border-radius: 0px 16px 16px 0px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #FA9128;
+  filter: blur(1px);
+  margin-right: 16px;
+}
+
+.iconActiveMision {
+  width: 32px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.iconActiveMision>img {
+  width: 100%;
+}
+
+.notification>p {
+  color: rgba(101, 80, 226, 1);
+  font-weight: bold;
+  margin-right: 16px;
+}
+.notificationComplete{
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  background-color: #9AC906;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  right: -280px;
+  border-radius: 16px 0px 0px 16px;
+  
+}
+.iconComplete{
+  width: 18px;
+  margin-left: 16px;
+}
+.iconComplete>img{
+  width: 100%;
+}
+.txtComplete{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.txtComplete>p{
+  margin-block-start: .2em;
+  margin-block-end: .2em;
+  color: rgba(101, 80, 226, 1);
+  font-weight: bold;
+}
+.txtComplete>h4{
+  margin-block-start: .2em;
+  margin-block-end: .2em;
 }
