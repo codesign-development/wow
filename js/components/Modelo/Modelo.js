@@ -1,6 +1,7 @@
 import modeloView from './modeloWiew.html'
 import Guardar from '../Guadar'
 import Stats from '../Stats'
+import Misiones from '../Misiones'
 import anime from 'animejs'
 
 export default () => {
@@ -30,9 +31,10 @@ export default () => {
   const menuLat = model.querySelector('.wrapperMenu')
   const notification = model.querySelector('.notification')
   const notificationComplete = model.querySelector('.notificationComplete')
+  const btnCloseWelcome = model.querySelector('.btnXWelcome')
   const btnClose = model.querySelector('.btnXtool')
   const btnCloseLeft = model.querySelectorAll('.btnXLeft')
-  console.log(btnClose);
+  const modales = model.querySelector('.wrapperModales')
   /* Morphing bgMenu */
   let morphing = anime({
     targets: menuMorph,
@@ -47,20 +49,17 @@ export default () => {
     loop: false,
     autoplay: false
   })
-
   /* Click counter */
   let clickUI = 0
 
   function countClick() {
     clickUI++
   }
-
   /* despelgando morphing menu lateral */
   function reverseMenu() {
     morphing.reverse()
     morphing.play()
   }
-
   /* ListenersUI */
   btnsModel.addEventListener('click', e => {
     e.stopPropagation()
@@ -113,7 +112,6 @@ export default () => {
   })
 
   arrowBack.addEventListener('click', () => {
-    
     morphing.reverse()
     morphing.play()
     arrowBack.style.display = 'none'
@@ -125,7 +123,7 @@ export default () => {
     optionMenu.removeChild(optionMenu.firstChild)
   })
 
-  function initUI(){
+  function initUI() {
     toolTipLat.style.display = 'none'
     btnsModel.style.pointerEvents = 'auto'
     uiUser.style.opacity = 1
@@ -137,64 +135,78 @@ export default () => {
     overlay.style.display = 'none'
     btnsModel.style.display = 'block'
     toolTip.style.display = 'none'
-
-    openNotification ()
+    modales.removeChild(toolTipLat)
+    openNotification()
     //openNotificationComplete ()
-   }
+  }
 
-  
-
-  function openNotification (){
+  function openNotification() {
     anime({
       targets: notification,
       translateX: 280,
       easing: 'easeInOutQuad',
       duration: 2000,
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       anime({
         targets: notification,
         translateX: 0,
         easing: 'easeInOutQuad',
         duration: 2000,
       })
-    },8000)
+    }, 8000)
   }
-  function openNotificationComplete (){
+
+  function openNotificationComplete() {
     anime({
       targets: notificationComplete,
       translateX: -280,
       easing: 'easeInOutQuad',
       duration: 2000,
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       anime({
         targets: notificationComplete,
         translateX: 0,
         easing: 'easeInOutQuad',
         duration: 2000,
       })
-    },8000)
+    }, 8000)
   }
 
-  function closeWelcome(){
-    welcomeModal.style.display = 'none'
-    logoWowBem.style.display = 'none'
+  function closeWelcome() {
+    modales.removeChild(welcomeModal)
+    modales.removeChild(logoWowBem)
+  }
+
+  btnCloseLeft[0].addEventListener('click', () => {
+    openMisiones()
+    closeWelcome()
+  })
+
+  btnCloseWelcome.addEventListener('click', () => {
+    openToolTip()
+    closeWelcome()
+  })
+
+  btnClose.addEventListener('click', () => {
+    openMisiones()
+    closeWelcome()
+  })
+
+  function openMisiones() {
+    modales.removeChild(toolTipLat)
+    modales.removeChild(toolTip)
+    modales.appendChild(Misiones())
+    uiUser.style.opacity = 1
+    uiUser.style.display = 'block'
+    overlay.style.backgroundColor = '#6550E2'
+  }
+  /* Animación tooltip */
+  function openToolTip() {
     overlay.style.backgroundColor = '#000'
     btnsModel.style.display = 'block'
     toolTip.style.display = 'block'
-  }
-  btnCloseLeft[0].addEventListener('click', ()=>{
-    initUI()
-    console.log('entra close left');
-  })
-  btnClose.addEventListener('click',()=>{
-    initUI()
-    console.log('entra close');
-  })
-/* Animación tooltip */
- function openToolTip(){
-  
     closeWelcome()
     anime({
       targets: iconPointer,
@@ -212,7 +224,7 @@ export default () => {
       easing: 'easeInOutQuad',
       duration: 2000,
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       iconNav.style.display = 'none'
       iconPointer.style.display = 'none'
       iconNavB.style.display = 'block'
@@ -234,36 +246,38 @@ export default () => {
         easing: 'easeInOutQuad',
         duration: 2000,
       })
-      setTimeout(()=>{
+      setTimeout(() => {
         toolTip.style.display = 'none'
         toolTipLat.style.display = 'block'
-        
-        setTimeout(()=>{
+
+        setTimeout(() => {
           txtBullet.textContent = 'Este botón guarda tu progreso durante la sesión'
           anime({
-          targets: toolTipLat,
-          translateY: 100,
-          easing: 'linear',
+            targets: toolTipLat,
+            translateY: 100,
+            easing: 'linear',
           })
-          setTimeout(()=>{
+          setTimeout(() => {
             txtBullet.textContent = 'Este botón muestra tus logros y misiones'
             anime({
-            targets: toolTipLat,
-            translateY: 180,
-            easing: 'linear',
+              targets: toolTipLat,
+              translateY: 180,
+              easing: 'linear',
             })
-            setTimeout(()=>{
-              initUI()
-            },4000)
+            setTimeout(() => {
+
+              openMisiones()
+            }, 4000)
           }, 4000)
         }, 4000)
       }, 5000)
     }, 4000)
- }
- 
+  }
+
+
+
   /* Listener bienvenida */
-  btnEnter.addEventListener('click', e =>{
-   
+  btnEnter.addEventListener('click', e => {
     openToolTip()
   })
 

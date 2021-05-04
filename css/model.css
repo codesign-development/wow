@@ -266,7 +266,18 @@
 .bullet>img {
   width: 100%;
 }
+.btnXWelcome {
+  max-width: 40px;
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  z-index: 2;
+}
 
+
+.btnXWelcome>img {
+  width: 100%;
+}
 .btnXLeft {
   max-width: 30px;
   position: absolute;

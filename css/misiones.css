@@ -1,0 +1,50 @@
+.misionModal{
+    position: relative;
+    z-index: 12;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.misionCard{
+    background-color: #6550E2;
+    border-radius: 16px;
+    padding: 28px;
+    height: 50%;
+}
+.misionTitle{
+    display: flex;
+    flex-direction: row;
+}
+.misionTitle>h1{
+    width: 80%;
+    text-align: left;
+}
+.iconMisionCard{
+    width: 15%; 
+}
+.iconMisionCard>img{
+    width: 90%; 
+}
+
+.btnSig {
+    max-width: 200px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20%;
+  }
+  
+  .btnSig>img {
+    width: 100%;
+    position: absolute;
+  }
+  .btnSig>p {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    font-size: 1.2em;
+    font-weight: bolder;
+  }
+  
