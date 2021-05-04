@@ -1,0 +1,37 @@
+[
+    {
+        "es":{
+            "bienvenida": {
+                "titulo": "Bienvenida",
+                "parrafo": "Estás a punto de entrar a un punto de venta sigue las indicaciones para poder ganar",
+                "boton": "Entrar"
+            },
+            "tooltip": {
+                "nav":{
+                    "drag": "Clic y arrastrar para poder observar al rededor",
+                    "hotspot": "Puede explorar el entorno, navegando a través de las flechas"
+                },
+                "lat":{
+                    "ayuda": "Este botón nos deja ver el tutorial de ayuda",
+                    "guardar": "Este botón guarda tu progreso durante la sesión",
+                    "misiones": "'Este botón muestra tus logros y misiones"
+                }
+            }
+        }
+    },
+    {
+        "en":{
+            "bienvenida": "Welocome"
+        }  
+    },
+    {
+        "fr":{
+            "bienvenida": "Bienvenido"
+        } 
+    },
+    {
+        "pt":{
+            "bienvenida": "Bienvenido"
+        } 
+    }
+]
