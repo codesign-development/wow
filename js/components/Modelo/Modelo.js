@@ -28,7 +28,11 @@ export default () => {
   const toolTipLat = model.querySelector('.toolTipLat')
   const txtBullet = model.querySelector('.containerBullet p')
   const menuLat = model.querySelector('.wrapperMenu')
-  
+  const notification = model.querySelector('.notification')
+  const notificationComplete = model.querySelector('.notificationComplete')
+  const btnClose = model.querySelector('.btnXtool')
+  const btnCloseLeft = model.querySelectorAll('.btnXLeft')
+  console.log(btnClose);
   /* Morphing bgMenu */
   let morphing = anime({
     targets: menuMorph,
@@ -127,16 +131,71 @@ export default () => {
     uiUser.style.opacity = 1
     uiUser.style.display = 'block'
     menuLat.style.display = 'block'
-    console.log(uiUser);
+
+    welcomeModal.style.display = 'none'
+    logoWowBem.style.display = 'none'
+    overlay.style.display = 'none'
+    btnsModel.style.display = 'block'
+    toolTip.style.display = 'none'
+
+    openNotification ()
+    //openNotificationComplete ()
    }
-/* Animación tooltip */
- function openToolTip(){
-  welcomeModal.style.display = 'none'
+
+  
+
+  function openNotification (){
+    anime({
+      targets: notification,
+      translateX: 280,
+      easing: 'easeInOutQuad',
+      duration: 2000,
+    })
+    setTimeout(()=>{
+      anime({
+        targets: notification,
+        translateX: 0,
+        easing: 'easeInOutQuad',
+        duration: 2000,
+      })
+    },8000)
+  }
+  function openNotificationComplete (){
+    anime({
+      targets: notificationComplete,
+      translateX: -280,
+      easing: 'easeInOutQuad',
+      duration: 2000,
+    })
+    setTimeout(()=>{
+      anime({
+        targets: notificationComplete,
+        translateX: 0,
+        easing: 'easeInOutQuad',
+        duration: 2000,
+      })
+    },8000)
+  }
+
+  function closeWelcome(){
+    welcomeModal.style.display = 'none'
     logoWowBem.style.display = 'none'
     overlay.style.backgroundColor = '#000'
     btnsModel.style.display = 'block'
     toolTip.style.display = 'block'
-    
+  }
+  btnCloseLeft[0].addEventListener('click', ()=>{
+    initUI()
+    console.log('entra close left');
+  })
+  btnClose.addEventListener('click',()=>{
+    initUI()
+    console.log('entra close');
+  })
+/* Animación tooltip */
+ function openToolTip(){
+  
+    closeWelcome()
     anime({
       targets: iconPointer,
       translateX: 120,
@@ -204,7 +263,7 @@ export default () => {
  
   /* Listener bienvenida */
   btnEnter.addEventListener('click', e =>{
-    e.stopPropagation()
+   
     openToolTip()
   })
 
