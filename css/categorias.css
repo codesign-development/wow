@@ -57,8 +57,9 @@
   font-size: .5em;
   text-align: center;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row;
+  justify-content: center;
 }
 
 .progressCat {
@@ -75,4 +76,47 @@
   /* Adjust with JavaScript */
   height: 8px;
   border-radius: 8px;
+}
+@media (max-width: 821px) {
+  .iconComponent {
+    padding: 4px 4px 4px 4px;
+    border-radius: 12px;
+    
+  }
+  .bgIcon {
+    width: 80%;
+  }
+  
+  .iconComponent>p {
+    font-size: .2em;
+    text-align: center;
+    margin:  auto;
+    width: 100%;
+  }
+  .IconContent {
+    height: auto;
+    margin-left: 16px;
+  }
+  .containercategoria>h2{
+    font-size: 1.2em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+}
+@media (max-width: 667px) {
+  .containercategoria>h2{
+    font-size: .8em;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+  }
+  .iconComponent>p {
+    font-size: .25em;
+  }
+  .bgIcon {
+    width: 60%;
+  }
+  .IconContent {
+    height: auto;
+    margin-left: 12px;
+  }
 }

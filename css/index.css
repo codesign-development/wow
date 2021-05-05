@@ -44,11 +44,11 @@ z-index: 0;
 
 h1{
     font-family: "ProximaNova-Black";
-    font-size: 3.5em;
+    font-size: 3em;
 }
 h2{
     font-family: "ProximaNova-Black";
-    font-size: 3em;
+    font-size: 2.8em;
 }
 h3{
     font-family: "ProximaNova-Black";
@@ -99,7 +99,7 @@ display: none;
 @media (max-width: 812px) {
     h1{
         font-family: "ProximaNova-Black";
-        font-size: 2em;
+        font-size: 1.8em;
     }
     h2{
         font-family: "ProximaNova-Black";

@@ -424,6 +424,15 @@
   margin-block-start: .2em;
   margin-block-end: .2em;
 }
+@media (max-width: 1367px) {
+  .optionMenu {
+    width: 60%;
+  }
+  .arrowBack {
+    left: 45%;
+  }
+  
+}
 @media (max-width: 821px) {
   
   .welcomeModal {
@@ -467,5 +476,12 @@
   .toolTipLat {
     width: 26%;
     display: none;
+  }
+  .arrowBack {
+    left: 55%;
+    top: 6%;
+    z-index: 12;
+    max-width: 32px;
+    
   }
 }
