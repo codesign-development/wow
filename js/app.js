@@ -107,3 +107,15 @@ window.addEventListener('resize', function () {
 
 root.appendChild(Idiomas())
 
+window.addEventListener('load', ()=>{
+  obtenerIdiomas()
+})
+function obtenerIdiomas(){
+  const url = '../public/idioma/idioma.json'
+  fetch(url)
+    .then(respuesta=>respuesta.json())
+    .then(resultado => console.log(resultado))
+
+  
+
+}

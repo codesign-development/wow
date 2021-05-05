@@ -86,3 +86,55 @@
 .numberFoot>img {
   width: 100%;
 }
+@media (max-width: 821px) {
+  .cardMision {
+    max-width: 48px;
+    height: 120px;
+    margin-left: 12px;
+  }
+  .numberMision {
+    margin-top: 8px;
+  }
+  
+  .numberMision>p {
+    width: 100%;
+    margin-block-start: .4em;
+    margin-block-end: 0em;
+    font-weight: bolder;
+  }
+  .containerMisiones {
+    width: 80%;
+    height: auto;
+    margin-top: 0px;
+    margin-right: -80px;
+  }
+  .containerMisiones>h2 {
+    font-size: .8em;
+    margin-block-start: 1em;
+    margin-block-end: 0.4em;
+}
+  .mision>p {
+    font-size: .3em;
+    text-align: center;
+    width: 100%;
+  }
+  
+}
+@media (max-width: 736px) {
+  .containerMisiones {
+    width: 92%;
+    margin-right: 0px;
+  }
+  .mision {
+    padding: 4px;
+  }
+  .mision>p {
+    font-size: .01em;
+    width: 100%;
+    text-align: center;
+    white-space: break-spaces;
+  }
+  .containerStats {
+    margin-top: 40px;
+  }
+}
