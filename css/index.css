@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url("../public/fonts/ProximaNova-Regular.otf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: url("../public/fonts/Proxima\ Nova\ Bold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "ProximaNova-Black";
+    src: url("../public/fonts/Proxima\ Nova\ Black.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "ProximaNova-Light";
+    src: url("../public/fonts/Proxima\ Nova\ Thin.otf");
+    font-weight: lighter;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,8 +27,10 @@ background-color: #866EEA;
 margin:0;
 padding: 0;
 overflow: hidden;
+font-size: 100%;
 font-family: arial;
 color: white;
+font-family: "ProximaNova-Regular";
 }
 canvas {
 position: absolute;
@@ -19,7 +42,26 @@ filter: url("#goo");
 z-index: 0;
 }
 
-
+h1{
+    font-family: "ProximaNova-Black";
+    font-size: 3.5em;
+}
+h2{
+    font-family: "ProximaNova-Black";
+    font-size: 3em;
+}
+h3{
+    font-family: "ProximaNova-Black";
+    font-size: 2.5em;
+}
+h4{
+    font-family: "ProximaNova-Black";
+    font-size: 2em;
+}
+p{
+    font-family: "ProximaNova-Regular";
+    font-size: 1.2em;
+}
 #svgFilter {
 display: none;
 }
@@ -53,3 +95,35 @@ display: none;
 .logoSales img{
    width: 100%;
 }
+
+@media (max-width: 812px) {
+    h1{
+        font-family: "ProximaNova-Black";
+        font-size: 2em;
+    }
+    h2{
+        font-family: "ProximaNova-Black";
+        font-size: 1.5em;
+    }
+    h3{
+        font-family: "ProximaNova-Black";
+        font-size: 1em;
+    }
+    h4{
+        font-family: "ProximaNova-Black";
+        font-size: .8em;
+    }
+    p{
+        font-family: "ProximaNova-Regular";
+        font-size: .5em;
+    }
+    
+ }
+ @media (max-width: 568px) {
+    h1{
+        font-family: "ProximaNova-Black";
+        font-size: 1.8em;
+    }
+    
+    
+ }

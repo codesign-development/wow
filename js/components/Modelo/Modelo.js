@@ -111,7 +111,7 @@ export default () => {
   function openNotificationComplete() {
     anime({
       targets: notificationComplete,
-      translateX: -280,
+      translateX: -380,
       easing: 'easeInOutQuad',
       duration: 2000,
     })

@@ -399,7 +399,7 @@
   align-items: center;
   position: absolute;
   top: 40%;
-  right: -280px;
+  right: -380px;
   border-radius: 16px 0px 0px 16px;
   
 }
@@ -423,4 +423,49 @@
 .txtComplete>h4{
   margin-block-start: .2em;
   margin-block-end: .2em;
+}
+@media (max-width: 821px) {
+  
+  .welcomeModal {
+    width: 40%;
+    height: 50%;
+    padding: 12px;
+  }
+  .btnXWelcome {
+    max-width: 32px;
+    top: -15px;
+    right: -10px;
+  }
+  .btnXtool {
+    max-width: 32px;
+    top: -15px;
+    right: -10px;
+  }
+  .btnXLeft {
+    max-width: 24px;
+    top: -12px;
+    left: -12px;
+    z-index: 2;
+  }
+  .iconNav, .iconNav2 {
+    max-width: 40px;
+  }
+  .iconPointer, .iconPointer2 {
+    max-width: 40px;
+    top: 3%;
+    left: 50%;
+  }
+  .cardTool {
+    padding: 12px;
+  }
+  .containerBullet>p{
+    font-size: .5em;
+  }
+  .bullet {
+    max-width: 320px;
+  }
+  .toolTipLat {
+    width: 26%;
+    display: none;
+  }
 }

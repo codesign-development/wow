@@ -59,3 +59,30 @@
   font-size: 1.2em;
   font-weight: bolder;
 }
+
+@media (max-width: 812px) {
+  .logoWow {
+    width: 30%;
+    margin-bottom: 60px;
+  }
+
+  .btnGroup {
+    width: 45%;
+    margin-top: 5%;
+  }
+  
+  .btnGroup img {
+    width: 12%;
+  }
+  .btnEnter {
+    max-width: 100px;
+    margin-top: 10%;
+  }
+  
+  .btnEnter>p {
+    top: -6px;
+    z-index: 2;
+    font-size: .8em;
+  }
+  
+}

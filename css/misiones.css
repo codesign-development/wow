@@ -37,7 +37,7 @@
   max-width: 200px;
   position: relative;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .btnSig>img {
@@ -51,4 +51,49 @@
   z-index: 2;
   font-size: 1.2em;
   font-weight: bolder;
+}
+@media (max-width: 821px) {
+  .misionCard {
+    width: 70%;
+    height: 50%;
+    padding: 12px;
+  }
+  .misionTitle>h1 {
+    width: 75%;
+    font-size: 1.5em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+  }
+  .btnSig {
+    max-width: 120px;
+    margin-top: 10%;
+  }
+  .btnSig>p {
+    font-size: .8em;
+    top: -4px
+  }
+  .MisionCard>p{
+    font-size: .8em;
+  }
+}
+@media (max-width: 821px) {
+  .misionCard {
+    width: 60%;
+    height: 60%;
+    padding: 12px;
+  }
+  .misionTitle>h1 {
+    width: 75%;
+    font-size: 1.2em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+  }
+  .btnSig {
+    max-width: 100px;
+    margin-top: 10%;
+  }
+  .btnSig>p {
+    font-size: .6em;
+    top: -2px
+  }
 }
