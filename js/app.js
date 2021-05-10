@@ -1,10 +1,13 @@
 /* Components */
+import idiomasSelect from '../json/idioma.json'
 import Idiomas from '../js/components/Idiomas'
-/* import Modelo from '../js/components/Modelo' */
 
+/* import Modelo from '../js/components/Modelo' */
+console.log(idiomasSelect);
 /* variables */
 const root = document.querySelector('#root')
 
+console.log();
 /* Animación back UI */
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -107,3 +110,4 @@ window.addEventListener('resize', function () {
 
 root.appendChild(Idiomas())
 
+localStorage.setItem('wow','id')

@@ -1,6 +1,6 @@
 import idiomasView from './idiomasView.html'
 import Modelo from '../Modelo'
-var idioma ={}
+export var setLan = {}
 export default () => {
 
   const selectIdiomas = document.createElement('div')
@@ -14,7 +14,7 @@ export default () => {
  
 
   btnGroup.addEventListener('click', e => {
-    const url = '../../../public/idioma/idioma.json'
+    const url = '../../../json'
     switch (e.target.id) {
       case 'es':
         fetch(url)
@@ -35,6 +35,8 @@ export default () => {
         fetch(url)
           .then(respuesta => respuesta.json())
           .then(resultado => cargarIdioma(resultado[3].pt))
+          .then((obtenerLan) => {localStorage.setItem('test', JSON.stringify(obtenerLan)); setLan=obtenerLan })
+          
         break;
       default:
         break;
@@ -42,10 +44,10 @@ export default () => {
 
    
 
-    /* selectIdiomas.style.display = 'none'
+   /*  selectIdiomas.style.display = 'none'
     root.removeChild(root.firstElementChild)
-    root.appendChild(Modelo()) */
-
+    root.appendChild(Modelo())
+ */
   })
 
   
@@ -57,7 +59,7 @@ export default () => {
 
 function cargarIdioma({bienvenida, categorias, misiones, tooltip, ui}){
    
-    const idioma = {
+  let idioma = {
       bienvenida,
       categorias,
       misiones,
@@ -65,5 +67,8 @@ function cargarIdioma({bienvenida, categorias, misiones, tooltip, ui}){
       ui,
 
     } 
-    console.log(idioma);
+   return idioma
 }
+
+
+
