@@ -44,10 +44,10 @@ export default () => {
 
    
 
-   /*  selectIdiomas.style.display = 'none'
+    selectIdiomas.style.display = 'none'
     root.removeChild(root.firstElementChild)
     root.appendChild(Modelo())
- */
+
   })
 
   
