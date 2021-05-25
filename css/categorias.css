@@ -5,7 +5,9 @@
 
 .containercategoria>h2 {
   text-align: right;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 .swipperMisiones {
@@ -20,26 +22,28 @@
   display: none;
 }
 .IconContent {
-  max-width: 80px;
-  height: auto;
-  margin-left: 28px;
+  width: 40px;
+  height: 40px;
   opacity: 0;
   transition: all 1s ease-in-out;
 }
 
 .iconComponent {
   background-color: #6550E2;
-  max-width: 80px;
-  max-height: 80px;
-  padding: 12px 12px 8px 12px;
-  border-radius: 24px;
-  -webkit-box-shadow: 0px 5px 26px 0px #6550E2;
-  box-shadow: 0px 5px 26px 0px #6550E2;
+    width: 100%;
+    height: 100%;
+    padding: 4px 0px 2px 0px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 5px 26px 0px #6550e2;
+    box-shadow: 0px 5px 26px 0px #6550e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bgIcon {
   width: 60%;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 .bgIcon>img {
@@ -48,9 +52,12 @@
 
 .wrapperIconsCat {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 52%;
+  margin-bottom: 12px;
 }
 
 .iconComponent>p {
@@ -66,8 +73,9 @@
   background-color: #D1E1EE;
   border-radius: 8px;
   padding: 0;
-  width: 100%;
-  margin-top: 8px;
+  width: 50%;
+  margin-top: 28px;
+  margin: 0 auto;
 }
 
 .progressCat>div {
@@ -77,6 +85,46 @@
   height: 8px;
   border-radius: 8px;
 }
+
+.wrapperCanasta{
+  width: 60%;
+  border-radius: 1px solid white;
+  margin: 0 auto;
+}
+.canasta{
+  /* background-image: url(../public/assets/canasta-bn.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; */
+  width: 100%;
+  position: relative;
+  background-image: url(../public/assets/canasta-bn.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-top: 38%;
+  margin-bottom: 24px;
+}
+
+
+
+.imgProgress{
+  position:absolute;
+  top: 0;
+  left: 20%;
+  bottom: 0;
+  height: 100%;
+  width: 30%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.imgProgress>img{
+  height: 100%;
+  
+}
+
+
 @media (max-width: 821px) {
   .iconComponent {
     padding: 4px 4px 4px 4px;

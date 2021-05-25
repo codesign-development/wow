@@ -26,7 +26,8 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 80px;
+  /* justify-content: center; */
   height: 100vh;
 }
 
@@ -36,6 +37,7 @@
 
 .saveProgress>h2 {
   text-align: right;
+  margin-block-start: 0.3em;
 }
 
 .saveProgress>p {
