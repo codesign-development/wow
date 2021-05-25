@@ -1,6 +1,7 @@
 import misionesView from './misionesView.html'
 import anime from 'animejs'
 
+console.log(localStorage.getItem('test'));
 export default ()=>{
 
     const misionModal = document.createElement('div')
